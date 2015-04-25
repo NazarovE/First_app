@@ -1,0 +1,40 @@
+<% provide(:title, "Log in") %>
+<%= render 'shared/error_session' %>
+<div id="wrapper">
+    <div class="clear"></div>
+    <div id="support_m">        
+            <div id="sup_nav_title">Войти в систему</div>
+            <%= @blabla %>
+            <%= form_for(:session, url: login_path) do |f| %>            
+            <div id="sup_box_plus">                
+                            <div id="reg_input">
+                                <%= f.email_field :email, placeholder: "E-mail или номер телефона", type: "text"%>
+                            </div>
+                            <div id="reg_input">
+                                <%= f.text_field :password, placeholder: "Пароль", type:"password"%>
+                            </div>                
+            </div>
+            <div id="sup_box">
+                    <div id="send_buttons">
+                            <ul>
+                                    <li class="send_buttons">                                        
+                                        <%= f.submit "Войти", class: "send_buttons" %>
+                                    </li>
+                                    <li><a href="#">Забыли пароль?</a></li>
+                                    <li><a href="#">На главную</a></li>
+                                    <li><a href="#">Помощь</a></li>
+                            </ul>
+                    </div>
+
+            </div>
+            <% end %>
+    </div>
+    <div id="main_m">
+                    <div id="auth_u_description">Авторизация</div>
+                    <div id="main_box">
+                            <p class="m_d_c">Привяжите Ваш аккаунт к номеру телефона. Все будет надежно защищено.</p>
+                            <p class="m_d_c"><a href="#">Подробнее</a></p>
+                    </div>
+    </div>
+</div>
+<div class="clear"></div>

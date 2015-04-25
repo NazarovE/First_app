@@ -1,6 +1,22 @@
-<h1>Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+<% provide(:title, "") %>
+<div id="support_hello">
+        <div class="title_hello">Реализуйте большие IT проекты</div>
+        <div class="title_small_hello">B2B площадка позволит Вам размещать заявки на разработку ПО, аутсорсинг и поиск IT специалистов по всему миру.</div>
+</div>
+<div id="main_m_hello">
+        <div id="main_m_hello_box">
+                        <div id="reg_input_m">
+                            <input type="text" placeholder="Почта или номер телефона">
+                        </div>
+                        <div id="reg_input_m">
+                            <input type="text" placeholder="Пароль">
+                        </div>
+                                <div class="reg_button">
+                                    <%= link_to "Зарегистрироваться", signup_path %>
+                                </div>
+                                <div class="reg_text_inform">Нажимая на кнопку "Зарегистрироваться", Вы принимаете условия <a href="#">пользования ресурсом</a> и <a href="#">обработки персональных данных.</a></div>
+        </div>
+        <div id="main_m_add">
+                <div class="addition_text_hello">Или зарегистрируйте страницу <a href="#" class="reg_c_button">Компании</a></div>
+        </div>
+</div>

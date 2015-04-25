@@ -9,7 +9,11 @@
 		<div id="login">
 			<ul>
                           <li class="reg_but_hel">
-                              <%= link_to "Войти", signup_path %>
+                              <% if logged_in? %>
+                                <%= link_to "Выйти", logout_path, method: "delete" %>
+                              <% else %>
+                                <%= link_to "Войти", login_path %>
+                              <% end %>
                           </li>
 			</ul>
 		</div>
