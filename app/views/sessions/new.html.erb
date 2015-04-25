@@ -12,7 +12,11 @@
                             </div>
                             <div id="reg_input">
                                 <%= f.text_field :password, placeholder: "Пароль", type:"password"%>
-                            </div>                
+                            </div>
+                              <%= f.label :remember_me, class: "checkbox inline" do %>
+                                <%= f.check_box :remember_me %>
+                                <span>Запомнить меня на этом компьютере</span>
+                              <% end %>
             </div>
             <div id="sup_box">
                     <div id="send_buttons">
