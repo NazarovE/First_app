@@ -4,8 +4,21 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user=User.find(params[:id])
-    #debugger
+    if !logged_in?
+      redirect_to root_path
+    else
+      #@user=User.find(params[:id])
+      @user=User.find(@current_user.id)
+    end
+  end
+  
+  def edit
+    if !logged_in?
+      redirect_to root_path
+    else
+      #@user = User.find(params[:id])
+      @user=User.find(@current_user.id)
+    end
   end
   
   def create

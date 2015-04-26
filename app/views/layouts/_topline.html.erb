@@ -4,10 +4,19 @@
 		<div id="logo_h">
                     <%= image_tag("logo.png", alt: "lorem") %>
                 </div>
-		<div id="search">
-		</div>
-		<div id="login">
+                <div id="search">
+                <% if logged_in? %>
+                          <input type="text" placeholder="Поиск по компаниям, людям, проектам..">  
+                <% end %>
+                </div>
+            <div id="login">
 			<ul>
+                          <% if logged_in? %>                            
+                            <li><%= link_to @current_user.name + " " + @current_user.surname, user_path %></li>
+                            <li>
+                                <a href="#" class="red_not"><%= image_tag("support/mail.png", alt: "lorem") %> +1</a>
+                            </li>
+                          <% end %>
                           <li class="reg_but_hel">
                               <% if logged_in? %>
                                 <%= link_to "Выйти", logout_path, method: "delete" %>
@@ -19,3 +28,20 @@
 		</div>
 	</div>
 </div>
+<% if logged_in? %>
+<div class="clear"></div>
+<div id="header">
+	<div id="header_wr">
+		<div id="m_menu">
+			<ul>
+				<li><a href="#">Компании</a></li>
+				<li><a href="#">B2B Проекты</a></li>
+				<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Аналитика</a></li>
+				<li><a href="#">События</a></li>
+				<li class="link_right"><a href="#">Услуги для бизнеса</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<% end %>

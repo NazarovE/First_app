@@ -1,5 +1,6 @@
 <% provide(:title, 'Sign up') %>
-
+<div class="clear"></div>
+<div id="wrapper_hello">
 	<div id="support_m">
 		<div id="sup_nav_title">Регистрация пользователя</div>
                 <%= form_for(@user) do |f| %>
@@ -22,9 +23,7 @@
                             <div id="reg_check">
                                 <input type="checkbox" checked="">Я согласен с политикой конфиденциальности и обработки персональных данных.
                             </div>
-                    
 		</div>
-		
 		<div id="sup_box">
 			<div id="send_buttons">
 			<ul>
@@ -34,17 +33,16 @@
                                 </li>
 			</ul>
 			</div>
-
 		</div>
                 <% end %>
 	</div>
-	<div id="main_m">
-			<div id="auth_u_description">Регистрация пользователя</div>
-			<div id="main_box">
-				<p class="m_d_c">Откройте для себя мир интересных задач. Проект предлагает Вам реализовать себя и получить деньги за свой труд. Только проверенные компании.</p>
-				<p class="m_d_c"><a href="#">Узнать возможности</a></p>
-			</div>
-		</div>
-
+<div id="main_m">
+                <div id="auth_u_description">Регистрация пользователя</div>
+                <div id="main_box">
+                        <p class="m_d_c">Откройте для себя мир интересных задач. Проект предлагает Вам реализовать себя и получить деньги за свой труд. Только проверенные компании.</p>
+                        <p class="m_d_c"><a href="#">Узнать возможности</a></p>
+                </div>
+</div>
+</div>
 
 
