@@ -5,3 +5,9 @@ skywalker:
     surname: Skywalker
     email: skywalker@sw.com
     password_digest: <%= User.digest('11111111') %>
+
+dart:
+    name: Dart
+    surname: Waider
+    email: aniken@sw.com
+    password_digest: <%= User.digest('33333333') %>
